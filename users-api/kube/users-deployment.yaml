@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user
+  labels:
+    app: user
+spec:
+  containers:
+    - name: users-api
+      image: creekworm/users-api

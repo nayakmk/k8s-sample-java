@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: datareader
+  labels:
+    app: datareader
+spec:
+  containers:
+    - name: datareader-api
+      image: creekworm/datareader-api

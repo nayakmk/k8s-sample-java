@@ -1,0 +1,4 @@
+rootProject.name = 'k8s-sample-java'
+include 'users-api'
+include 'datareader-api'
+
