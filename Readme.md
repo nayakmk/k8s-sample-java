@@ -95,7 +95,11 @@ localhost:80
 ## Reference
 
 https://unofficial-kubernetes.readthedocs.io/en/latest/tasks/access-application-cluster/create-external-load-balancer/
+
 https://medium.com/payscale-tech/imperative-vs-declarative-a-kubernetes-tutorial-4be66c5d8914
+
 https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-networking-guide-beginners.html
+
 https://kubeyaml.com/
+
 https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
