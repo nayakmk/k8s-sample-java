@@ -1,5 +1,10 @@
 # Steps
 
+## Pre-requisites
+
+Docker Installed
+Docker with Kubernetes Enabled
+
 ## Build Applications
 
 ### Create Dockerfile for each application
@@ -42,8 +47,12 @@ Verify if you are able to access the application via Docker.
 
 ### Push the docker image to Docker Hub.
 
+#### Change Tag to DockerHub Specific Repo
+
 docker tag <image-id> creekworm/datareader-api
-docker tag 916d76f0576e creekworm/users-api
+docker tag <image-id> creekworm/users-api
+
+#### Change Tag to DockerHub Specific Repo
 
 docker push creekworm/datareader-api
 docker push creekworm/users-api
@@ -78,13 +87,34 @@ spec:
 
 > kubectl get services
 
-## Expose Services for External Access
+### Expose Services for External Access
 
 > kubectl apply -f kube/users-service.yaml
 
 ### Describe a Service
 
 > kubectl describe service user 
+
+```
+Name:                     user
+Namespace:                default
+Labels:                   <none>
+Annotations:              Selector:  app=user
+Type:                     LoadBalancer
+IP:                       10.98.167.228
+LoadBalancer Ingress:     localhost
+Port:                     <unset>  80/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  30103/TCP
+Endpoints:                10.1.0.172:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+```
+
+Important Line: 
+
+LoadBalancer Ingress:     localhost
 
 ### Access the User API
 
